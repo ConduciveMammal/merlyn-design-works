@@ -1,0 +1,27 @@
+.service-card {
+  padding: 40px 45px;
+  border-radius: 8px;
+  cursor: default;
+  transition: background-color 0.2s ease-in;
+
+  &:hover {
+    background-color: #242A35;
+  }
+}
+
+.service-card__icon {
+  border-radius: 8px;
+  background-color: #439FBC;
+  padding: 15px;
+  width: 80px;
+  height: 80px;
+  // box-shadow: 0px 0px 6px -2px rgba(255,255,255,0.6);
+  filter: drop-shadow(0px 0px 5px rgba(36, 42, 53, 1));
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin: 0;
+  }
+}

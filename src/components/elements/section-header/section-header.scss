@@ -1,0 +1,26 @@
+.section__header {
+  display: flex;
+  align-items: center;
+
+  &.section__header--row {
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+
+  &.section__header--column {
+    flex-direction: column;
+  }
+}
+
+.section__title {
+  font-size: 39px;
+  flex: 1 1 50%;
+  margin: 0;
+}
+
+.section__content {
+  font-size: 16px;
+  letter-spacing: 0.005em;
+  flex: 0 0 50%;
+  margin: 0;
+}

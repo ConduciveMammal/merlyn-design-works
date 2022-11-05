@@ -2,9 +2,13 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
+import Layout from "../components/structure/layout"
+import HeroBanner from "../components/sections/hero-banner/hero"
+import LogoList from "../components/sections/logo-list/logo-list"
+import Services from "../components/sections/services/services"
+import Projects from "../components/sections/projects/projects"
+import * as styles from "../components/structure/index.module.scss"
 
 const links = [
   {
@@ -72,6 +76,10 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
+    <HeroBanner />
+    <LogoList />
+    <Services />
+    <Projects />
     <div className={styles.textCenter}>
       <StaticImage
         src="../images/example.png"
@@ -83,7 +91,7 @@ const IndexPage = () => (
         style={{ marginBottom: `var(--space-3)` }}
       />
       <h1>
-        Welcome to <b>Gatsby!</b>
+        Welcome to <b>Gatsby, Liam!</b>
       </h1>
       <p className={styles.intro}>
         <b>Example pages:</b>{" "}

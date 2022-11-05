@@ -1,0 +1,32 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 25px;
+  border-radius: 8px;
+  appearance: none;
+  background: var(--color-button);
+  border: 1px solid var(--color-button-border);
+  cursor: pointer;
+  user-select: none;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.005em;
+  text-align: center;
+}
+
+.button--primary {
+  --color-button: #F3692E;
+  --color-button-border: transparent;
+  --color-button-text: #fff;
+
+  &:hover {
+    --color-button: darken(#F3692E, 0.2);
+    --test: color.adjust(#998099, $lightness: -30%);
+    --color-button-text: #fff;
+  }
+}
+
+.button--outline {
+  --color-button: transparent;
+}

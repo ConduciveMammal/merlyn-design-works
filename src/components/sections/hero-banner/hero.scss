@@ -1,0 +1,22 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 120px;
+}
+
+.hero__image {
+  width: 100%;
+}
+
+.hero__title,
+.hero__subtitle {
+  font-weight: 700;
+}
+
+.hero__title {
+  font-size: 64px;
+}
+
+.hero__subtitle {
+  font-size: 30px;
+}

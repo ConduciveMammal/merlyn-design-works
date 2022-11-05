@@ -1,0 +1,21 @@
+.logo-list {
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.logo-list__grid {
+  display: grid;
+  grid-auto-columns: minmax(160px, auto);
+  gap: 55px;
+  grid-auto-flow: column;
+  grid-template-columns: none;
+
+}
+
+.logo-list__item {
+
+  img {
+    width: 100%;
+    display: block;
+  }
+}

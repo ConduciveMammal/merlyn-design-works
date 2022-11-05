@@ -1,19 +1,25 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "merlyn-design-works",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Liam Merlyn <liam@merlyndesignworks.com>",
   "dependencies": {
+    "@fontsource/mulish": "^4.5.13",
+    "@svgr/webpack": "^6.5.1",
     "gatsby": "^4.24.4",
     "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-manifest": "^4.24.0",
+    "gatsby-plugin-sass": "^5.24.0",
     "gatsby-plugin-sharp": "^4.24.0",
+    "gatsby-plugin-svgr": "^3.0.0-beta.0",
+    "gatsby-source-contentful": "^7.22.0",
     "gatsby-source-filesystem": "^4.24.0",
     "gatsby-transformer-sharp": "^4.24.0",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "sass": "^1.55.0"
   },
   "devDependencies": {
     "prettier": "^2.7.1"
