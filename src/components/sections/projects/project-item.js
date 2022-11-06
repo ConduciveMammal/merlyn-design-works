@@ -34,11 +34,9 @@ const options = {
 }
 
 const ProjectItem = ({project, alignClass, index}) => {
-  console.table({project});
   const projectDate = new Date(project.projectDate);
   const dateOptions = { year: 'numeric', month: 'numeric', day: 'numeric' };
 
-console.log(projectDate.toLocaleDateString('en-GB', dateOptions).toString());
   return (
     <article className={`project-item project-item--${alignClass}`}>
       <div className="project-item__image-wrapper">
