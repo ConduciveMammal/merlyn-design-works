@@ -15,18 +15,19 @@
   font-size: 16px;
   letter-spacing: 0.005em;
   text-align: center;
+  text-decoration: none;
+  transition: 0.2s ease-in;
+  transition-property: background-color, color, border-color;
 }
 
-$test: #ff0000;
-
-.button--primary {
-  --color-button: #F3692E;
+.button.button--primary {
+  --color-button: $color-primary;
   --color-button-border: transparent;
   --color-button-text: #fff;
 
+
   &:hover {
-    --color-button: darken(#F3692E, 0.2);
-    @debug color.adjust($test, $lightness: -30%);
+    --color-button: $color-primary--hover;
     --color-button-text: #fff;
   }
 }
