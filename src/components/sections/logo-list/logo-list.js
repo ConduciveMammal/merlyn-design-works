@@ -7,27 +7,27 @@ const LogoList = () => (
     <div className="logo-list__grid">
       <article className="logo-list__item">
         <a href="/">
-          <img src="https://via.placeholder.com/160x100.png" alt="" />
+          <img src="https://via.placeholder.com/160x100.png" alt="" height="100" width="160" />
         </a>
       </article>
       <article className="logo-list__item">
         <a href="/">
-          <img src="https://via.placeholder.com/160x100.png" alt="" />
+          <img src="https://via.placeholder.com/160x100.png" alt="" height="100" width="160" />
         </a>
       </article>
       <article className="logo-list__item">
         <a href="/">
-          <img src="https://via.placeholder.com/160x100.png" alt="" />
+          <img src="https://via.placeholder.com/160x100.png" alt="" height="100" width="160" />
         </a>
       </article>
       <article className="logo-list__item">
         <a href="/">
-          <img src="https://via.placeholder.com/160x100.png" alt="" />
+          <img src="https://via.placeholder.com/160x100.png" alt="" height="100" width="160" />
         </a>
       </article>
       <article className="logo-list__item">
         <a href="/">
-          <img src="https://via.placeholder.com/160x100.png" alt="" />
+          <img src="https://via.placeholder.com/160x100.png" alt="" height="100" width="160" />
         </a>
       </article>
     </div>

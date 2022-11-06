@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -15,6 +17,8 @@
   text-align: center;
 }
 
+$test: #ff0000;
+
 .button--primary {
   --color-button: #F3692E;
   --color-button-border: transparent;
@@ -22,7 +26,7 @@
 
   &:hover {
     --color-button: darken(#F3692E, 0.2);
-    --test: color.adjust(#998099, $lightness: -30%);
+    @debug color.adjust($test, $lightness: -30%);
     --color-button-text: #fff;
   }
 }
