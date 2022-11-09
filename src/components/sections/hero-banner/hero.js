@@ -1,24 +1,65 @@
 import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { renderRichText } from 'gatsby-source-contentful/rich-text'
+import { INLINES, BLOCKS, MARKS } from '@contentful/rich-text-types'
 import './hero.scss';
 
-const HeroBanner = () => (
+const options = {
+  renderMark: {
+    [MARKS.BOLD]: (text) => <strong className="font-bold">{text}</strong>,
+  },
+  renderNode: {
+    [INLINES.HYPERLINK]: (node, children) => {
+      console.log(children);
+      const { uri } = node.data
+      return (
+        <a href={uri} className="underline">
+          {children}
+        </a>
+      )
+    },
+    [BLOCKS.HEADING_2]: (node, children) => {
+      return <h2>{children}</h2>
+    },
+    [BLOCKS.EMBEDDED_ASSET]: (node) => {
+      const { gatsbyImageData, description } = node.data.target
+      return (
+        <GatsbyImage
+          image={getImage(gatsbyImageData)}
+          alt={description}
+        />
+      )
+    },
+  },
+}
+
+const HeroBanner = ({imageType, image, imageAlt, title, subheading, content, contentType = 'plain'}) => (
   <section className="section section--hero hero">
     <div className="hero__column hero__column--image">
-      <StaticImage
-        src="../../../images/portrait.jpg"
-        alt="A dinosaur"
-        placeholder="dominantColor"
-        height={700}
-        className="hero__image" />
+      {
+        imageType === 'static' ?
+        <StaticImage
+          src={image}
+          alt={imageAlt}
+          placeholder="dominantColor"
+          height={700}
+          className="hero__image" />
+        :
+        <GatsbyImage image={image} alt={title} />
+      }
     </div>
 
     <div className="hero__column hero__column--content">
-      <h1 className="hero__title">Liam Merlyn</h1>
+      <h1 className="hero__title">{title}</h1>
 
-      <h2 className="hero__subtitle">Lead Shopify Developer from Birmingham, UK.</h2>
+      <h2 className="hero__subtitle">{subheading}</h2>
 
-      <p className="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar quam nisi nisl gravida leo nisi augue. Vivamus nunc interdum interdum pulvinar massa nullam odio at. Sem cursus tincidunt velit porttitor. Nunc, elit duis eu nunc curabitur aenean volutpat.</p>
+      {contentType === 'rich' ?
+        <div className="hero__text">{renderRichText(content, options)}</div>
+        :
+        <div className="hero__text"><p>{content}</p></div>
+      }
+
 
       <a href="/" className="button button--primary">Get in touch</a>
     </div>

@@ -18,6 +18,9 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         implementation: require("sass"),
+        sassOptions: {
+          includePaths: ["src/styles/settings/variables.scss"],
+        }
       }
     },
     {

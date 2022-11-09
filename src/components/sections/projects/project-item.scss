@@ -26,7 +26,14 @@
 
 .project-item__content {
   grid-area: content;
-  padding-left: 120px;
+
+  .project-item--top-left & {
+    padding-left: 120px;
+  }
+
+  .project-item--bottom-right & {
+    padding-right: 120px;
+  }
 }
 
 .project-item__name {
