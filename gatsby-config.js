@@ -6,8 +6,9 @@ module.exports = {
   siteMetadata: {
     title: `Merlyn Design Works`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    author: `@ConduciveMammal`,
+    siteUrl: `https://merlyndesignworks.co.uk/`,
+    gqlUrl: `/__graphql`
   },
   plugins: [
     `gatsby-plugin-image`,

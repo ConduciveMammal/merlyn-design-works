@@ -9,7 +9,7 @@ const ProjectPage = ({data}) => {
   const project = data.contentfulPortfolioItem
   return (
     <Layout>
-      <HeroBanner imageType="gatsby" image={project.featuredImage.gatsbyImage} title={project.projectName} subheading={``} contentType="rich" content={project.introduction}/>
+      <HeroBanner image={project.featuredImage.gatsbyImage} title={project.projectName} subheading={``} contentType="rich" content={project.introduction}/>
       <h1>{project.projectName}</h1>
       <Link to="/">Go back to the homepage</Link>
     </Layout>

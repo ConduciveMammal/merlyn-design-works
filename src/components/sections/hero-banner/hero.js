@@ -33,37 +33,30 @@ const options = {
   },
 }
 
-const HeroBanner = ({imageType, image, imageAlt, title, subheading, content, contentType = 'plain'}) => (
-  <section className="section section--hero hero">
-    <div className="hero__column hero__column--image">
-      {
-        imageType === 'static' ?
-        <StaticImage
-          src={image}
-          alt={imageAlt}
-          placeholder="dominantColor"
-          height={700}
-          className="hero__image" />
-        :
+const HeroBanner = ({image, imageAlt, title, subheading, content, contentType = 'plain'}) => {
+  console.log(image);
+  return (
+    <section className="section section--hero hero">
+      <div className="hero__column hero__column--image">
         <GatsbyImage image={image} alt={title} />
-      }
-    </div>
+      </div>
 
-    <div className="hero__column hero__column--content">
-      <h1 className="hero__title">{title}</h1>
+      <div className="hero__column hero__column--content">
+        <h1 className="hero__title">{title}</h1>
 
-      <h2 className="hero__subtitle">{subheading}</h2>
+        <h2 className="hero__subtitle">{subheading}</h2>
 
-      {contentType === 'rich' ?
-        <div className="hero__text">{renderRichText(content, options)}</div>
-        :
-        <div className="hero__text"><p>{content}</p></div>
-      }
+        {contentType === 'rich' ?
+          <div className="hero__text">{renderRichText(content, options)}</div>
+          :
+          <div className="hero__text"><p>{content}</p></div>
+        }
 
 
-      <a href="/" className="button button--primary">Get in touch</a>
-    </div>
-  </section>
-)
+        <a href="/" className="button button--primary">Get in touch</a>
+      </div>
+    </section>
+  )
+}
 
 export default HeroBanner;
