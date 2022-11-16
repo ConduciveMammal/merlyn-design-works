@@ -8,9 +8,20 @@ import LogoList from "../components/sections/logo-list/logo-list"
 import Services from "../components/sections/services/services"
 import Projects from "../components/sections/projects/projects"
 import Launcher from "../components/elements/launcher/Launcher"
-import { getImage, getSrc } from "gatsby-plugin-image"
-// import * as styles from "../components/structure/index.module.scss"
+import { getImage } from "gatsby-plugin-image"
 
+const IndexPage = () => {
+  const heroImageQuery = useStaticQuery(graphql`
+  query {
+    file(name: {eq: "headshot-lookingup--square"}) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+  }
+`)
+
+const heroImage = getImage(heroImageQuery.file.childImageSharp)
 const introContent = {
   image: '../../../images/portrait.jpg',
   imageAlt: 'Liam Merlyn',
@@ -19,24 +30,15 @@ const introContent = {
   content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet repellat reprehenderit magnam culpa enim corporis?'
 }
 
-const IndexPage = () => {
-  const heroImage = useStaticQuery(graphql`
-  query {
-    file(name: {eq: "portrait"}) {
-      childImageSharp {
-        id
-      }
-    }
-  }
-`)
-
-const image = getSrc(heroImage.file.childImageSharp)
-console.log(image);
   return (
     <Layout>
-
       <Seo title="Home" />
-      <HeroBanner image={heroImage.file.childImageSharp.fixed} imageAlt={introContent.imageAlt} title={introContent.title} subheading={introContent.subheading} content={introContent.content} />
+      <HeroBanner
+        image={heroImage}
+        imageAlt={introContent.imageAlt}
+        title={introContent.title}
+        subheading={introContent.subheading}
+        content={introContent.content} />
       <LogoList />
       <Services />
       <Projects />
