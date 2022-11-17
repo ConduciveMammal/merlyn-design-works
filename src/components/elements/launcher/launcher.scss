@@ -15,7 +15,10 @@
   aspect-ratio: 1;
   height: 50px;
   border-radius: 4px;
+  border: 0;
   background-color: #e6e6e6;
+  appearance: none;
+  cursor: pointer;
   padding: 5px;
   display: flex;
   align-items: center;
@@ -24,9 +27,14 @@
 
   img {
     margin: 0;
+    pointer-events: none;
   }
 
-  &:hover {
+  &.clicked {
+    background-color: firebrick;
+  }
+
+  &:hover:not(.clicked) {
     background-color: #dadada;
   }
 }

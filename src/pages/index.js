@@ -7,6 +7,7 @@ import HeroBanner from "../components/sections/hero-banner/hero"
 import LogoList from "../components/sections/logo-list/logo-list"
 import Services from "../components/sections/services/services"
 import Projects from "../components/sections/projects/projects"
+import Experience from "../components/sections/experience/experience"
 import Launcher from "../components/elements/launcher/Launcher"
 import { getImage } from "gatsby-plugin-image"
 
@@ -42,6 +43,7 @@ const introContent = {
       <LogoList />
       <Services />
       <Projects />
+      <Experience />
       <Launcher />
     </Layout>
   )
