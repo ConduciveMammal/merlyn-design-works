@@ -12,7 +12,7 @@ const PositionBar = ({job}) => {
             icon={job.companyLogo.publicUrl}
             />
           <div className="position-bar__content">
-            <h3 className="position-bar__title">{job.positionTitle} at <a href={job.companyWebsite} target="_blank" rel="noopener">{job.companyName}</a></h3>
+            <h3 className="position-bar__title">{job.positionTitle} at <a href={job.companyWebsite} target="_blank" rel="noreferrer">{job.companyName}</a></h3>
             <time className="position-bar__date">{job.dateFrom} &ndash; {job.dateTo || 'Present'}</time>
             <p className="position-bar__description">{job.shortDescription.shortDescription}</p>
           </div>

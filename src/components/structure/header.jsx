@@ -22,7 +22,7 @@ const Header = ({ siteTitle }) => (
       <nav className="header__navigation">
         <ul className="header__navigation-list">
           <li><Link to="/">About me</Link></li>
-          <li><Link to="/">Portfolio</Link></li>
+          <li><Link to="/projects">Portfolio</Link></li>
           <li><Link to="/">Blog</Link></li>
           <li><Link to="/">Contact me</Link></li>
         </ul>
