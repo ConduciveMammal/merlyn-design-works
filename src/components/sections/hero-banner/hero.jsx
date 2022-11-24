@@ -7,7 +7,7 @@ const HeroBanner = ({image, title, subheading, content, contentType = 'plain'}) 
   return (
     <section className="section section--hero hero">
       <div className="hero__column hero__column--image">
-        <GatsbyImage image={image} alt={title} />
+        <GatsbyImage image={image} alt={title} loading="eager"/>
       </div>
 
       <div className="hero__column hero__column--content">
