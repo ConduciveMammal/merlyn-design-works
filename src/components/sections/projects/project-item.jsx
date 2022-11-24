@@ -5,11 +5,11 @@ import RichText from "../../elements/rich-text/rich-text"
 import './project-item.scss';
 
 const ProjectItem = ({project, alignClass, index}) => {
-
+  console.log(index);
   return (
     <article className={`project-item project-item--${alignClass}`}>
       <div className="project-item__image-wrapper">
-        <GatsbyImage image={project.featuredImage.gatsbyImage} alt={project.projectName} />
+        <GatsbyImage image={project.featuredImage.gatsbyImage} loading={index === 0 ? 'eager' : 'lazy'} alt={project.projectName} />
       </div>
 
       <div className="project-item__content">
