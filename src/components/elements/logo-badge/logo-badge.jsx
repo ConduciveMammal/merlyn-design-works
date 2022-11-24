@@ -6,7 +6,7 @@ const LogoBadge = ({icon, alt, width = 50, height = 50, loading = 'lazy'}) => {
     <div className="logo-badge" test={`${icon}`}>
       <img
         src={icon}
-        alt={alt}
+        alt={alt || ''}
         width={width}
         height={height}
         loading={loading} />

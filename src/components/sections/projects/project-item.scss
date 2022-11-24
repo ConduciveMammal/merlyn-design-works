@@ -11,12 +11,31 @@
     align-items: start;
     grid-template-areas:
       "image content";
+
+      @media screen and (max-width: 480px) {
+        grid-template-areas:
+          "image"
+          "content";
+      }
   }
 
   &.project-item--bottom-right {
     align-items: end;
     grid-template-areas:
       "content image";
+
+      @media screen and (max-width: 480px) {
+        grid-template-areas:
+          "image"
+          "content";
+      }
+  }
+
+  @media screen and (max-width: 480px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "content";
   }
 }
 
@@ -29,10 +48,19 @@
 
   .project-item--top-left & {
     padding-left: 120px;
+
+    @media screen and (max-width: 480px) {
+      padding-left: 0;
+    }
   }
 
   .project-item--bottom-right & {
     padding-right: 120px;
+
+
+    @media screen and (max-width: 480px) {
+      padding-right: 0;
+    }
   }
 }
 

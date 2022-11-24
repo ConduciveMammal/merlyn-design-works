@@ -6,15 +6,7 @@ import './header.scss';
 
 const Header = ({ siteTitle }) => (
   <header
-    className="header"
-    style={{
-      margin: `0 auto`,
-      padding: `var(--space-4) var(--size-gutter)`,
-      display: `flex`,
-      alignItems: `center`,
-      justifyContent: `space-between`,
-    }}
-  >
+    className="header">
     <div className="header__logo">
       <Link to="/">
         <img

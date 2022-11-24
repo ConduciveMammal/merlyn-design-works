@@ -3,7 +3,17 @@
   top: 0;
   left: 0;
   right: 0;
+  margin: 0px auto;
+  padding: var(--space-4) var(--size-gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 }
+
 .header__navigation-list {
   display: flex;
   align-items: center;
