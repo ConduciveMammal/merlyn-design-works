@@ -1,0 +1,11 @@
+.experience__column-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 120px;
+}
+
+.experience__position-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

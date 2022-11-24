@@ -5,8 +5,6 @@ import RichText from "../../elements/rich-text/rich-text"
 import './project-item.scss';
 
 const ProjectItem = ({project, alignClass, index}) => {
-  const projectDate = new Date(project.projectDate);
-  const dateOptions = { year: 'numeric', month: 'numeric', day: 'numeric' };
 
   return (
     <article className={`project-item project-item--${alignClass}`}>
@@ -30,7 +28,7 @@ const ProjectItem = ({project, alignClass, index}) => {
         </ul>
 
         <p className="project-item__detail">
-          <strong>Project Date:</strong> {projectDate.toLocaleDateString('en-GB', dateOptions).toString()}
+          <strong>Project Date:</strong> {project.projectDate}
         </p>
 
         <a href={`/projects/${project.projectHandle}`} className="button button--primary">View project</a>

@@ -19,7 +19,7 @@ const Projects = () => {
               )
             }
             clientName
-            projectDate
+            projectDate(formatString: "MMM YYYY")
             projectHandle
             projectName
             introduction {

@@ -15,7 +15,6 @@ query ServiceCardQuery {
         serviceTitle
         serviceIcon {
           publicUrl
-          url
         }
         serviceDescription {
           serviceDescription
@@ -35,15 +34,19 @@ return (
         />
 
         <div className="services__cards">
-        {
-          data.allContentfulServiceCard.edges.map((node, id) => (
-            <ServiceCard
-              key={id}
-              title={node.node.serviceTitle}
-              icon={node.node.serviceIcon}
-              description={node.node.serviceDescription} />
-          ))
-        }
+          {
+            data.allContentfulServiceCard.edges.map((serviceNode, id) => {
+              const service = serviceNode.node
+
+              return (
+                <ServiceCard
+                  key={id}
+                  title={service.serviceTitle}
+                  icon={service.serviceIcon.publicUrl}
+                  description={service.serviceDescription} />
+              )
+            })
+          }
         </div>
     </section>
   )

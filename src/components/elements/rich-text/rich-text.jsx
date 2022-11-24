@@ -9,7 +9,6 @@ const options = {
   },
   renderNode: {
     [INLINES.HYPERLINK]: (node, children) => {
-      console.log(children);
       const { uri } = node.data
       return (
         <a href={uri} className="underline">

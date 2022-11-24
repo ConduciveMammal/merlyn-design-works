@@ -1,0 +1,22 @@
+.position-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.position-bar__title {
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0;
+}
+
+.position-bar__date {
+  font-weight: 600;
+  font-size: 14px;
+  color: #9A9AB0;
+}
+
+.position-bar__description {
+  margin: 0;
+}

@@ -8,8 +8,8 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
 import Header from "./header"
+import Launcher from "../elements/launcher/Launcher"
 import "./layout.scss"
 
 const Layout = ({ children }) => {
@@ -42,6 +42,11 @@ const Layout = ({ children }) => {
         >
           &copy; {new Date().getFullYear()} &middot; Liam Merlyn
         </footer>
+        {
+          process.env.ENV === 'development' ? (
+            <Launcher />
+          ) : null
+        }
       </div>
     </>
   )

@@ -2,6 +2,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import gqlLogo from '../../../images/icons/gql-logo.svg';
 import homeIcon from '../../../images/icons/home.svg';
+import refreshIcon from '../../../images/icons/reload.svg';
 import './launcher.scss';
 
 const Launcher = () => {
@@ -37,7 +38,7 @@ const refreshData = (evt) => {
       </a>
 
       <button tooltip="Open Root Domain" className="launcher__link" onClick={(evt) => refreshData(evt)}>
-        <img src={homeIcon} height="20" width="20" aria-hidden="true" alt="" />
+        <img src={refreshIcon} height="20" width="20" aria-hidden="true" alt="" />
         <span className="visually-hidden">Refresh</span>
       </button>
 
