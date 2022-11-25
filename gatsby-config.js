@@ -51,7 +51,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `standalone`,
-        icon: `src/images/mdw-favicon.svg`,
+        icon: `src/images/app-icon.png`,
         icon_options: {
           purpose: `maskable`
         }
