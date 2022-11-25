@@ -5,7 +5,6 @@ import RichText from "../../elements/rich-text/rich-text"
 import './project-item.scss';
 
 const ProjectItem = ({project, alignClass, index}) => {
-  console.log(index);
   return (
     <article className={`project-item project-item--${alignClass}`}>
       <div className="project-item__image-wrapper">
