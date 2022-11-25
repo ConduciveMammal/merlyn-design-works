@@ -50,7 +50,7 @@ module.exports = {
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `src/images/mdw-favicon.svg`,
         icon_options: {
           purpose: `maskable`
