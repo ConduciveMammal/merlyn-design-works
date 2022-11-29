@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Merlyn Design Works`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Liam Merlyn - Lead Shopify Developer with nearly 10 years experience in the Shopify space.`,
     author: `@ConduciveMammal`,
     siteUrl: `https://merlyndesignworks.co.uk/`,
     gqlUrl: `/__graphql`
@@ -15,6 +15,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     'gatsby-plugin-svgr',
+    {
+      resolve: `gatsby-plugin-csp`,
+      options: {
+        disableOnDev: true
+      }
+    },
     {
       resolve: `gatsby-plugin-sass`,
       options: {

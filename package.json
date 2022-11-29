@@ -8,6 +8,7 @@
     "@fontsource/mulish": "^4.5.13",
     "@svgr/webpack": "^6.5.1",
     "gatsby": "^5.0.1",
+    "gatsby-plugin-csp": "^1.1.4",
     "gatsby-plugin-image": "^3.1.0",
     "gatsby-plugin-manifest": "^5.1.0",
     "gatsby-plugin-sass": "^6.1.0",
@@ -16,12 +17,15 @@
     "gatsby-source-contentful": "^8.1.0",
     "gatsby-source-filesystem": "^5.1.0",
     "gatsby-transformer-sharp": "^5.1.0",
+    "mixpanel-browser": "^2.45.0",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-mixpanel": "^1.0.5",
     "sass": "^1.55.0"
   },
   "devDependencies": {
+    "axios": "^1.2.0",
     "prettier": "^2.7.1"
   },
   "keywords": [

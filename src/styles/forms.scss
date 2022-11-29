@@ -1,0 +1,44 @@
+@import './settings/variables.scss';
+
+input:where(:not([type="button"])),
+textarea {
+  width: 100%;
+  border: 1px solid #9A9AB0;
+  background-color: #242A35;
+  padding: 15px;
+  transition: border-color 0.2s ease-in-out;
+
+  &:focus {
+    border-color: $color-primary;
+
+    &::placeholder {
+      opacity: 0.3;
+    }
+  }
+
+  &::placeholder {
+    transition: opacity 0.2s ease-in;
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 700;
+
+  &[for] {
+    cursor: pointer;
+  }
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper {
+
+  + .input-wrapper {
+    margin-top: 25px;
+  }
+}

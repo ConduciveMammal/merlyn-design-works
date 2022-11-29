@@ -1,0 +1,10 @@
+.contact-form__wrapper {
+  display: grid;
+  grid-template-columns: 1.5fr 2.5fr;
+  gap: 15px;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
