@@ -1,5 +1,4 @@
 import React, { useState }  from "react"
-import axios from "axios";
 
 import Layout from "../components/structure/layout"
 import SectionHeader from "../components/elements/section-header/section-header";
@@ -7,24 +6,6 @@ import Seo from "../components/seo"
 
 import '../styles/forms.scss';
 import '../styles/contact-page.scss';
-
-function submitForm(evt) {
-  evt.preventDefault();
-  const formData = new FormData(evt.target);
-
-  fetch("https://getform.io/f/e17fe6a1-2a18-4b27-ac16-bfa123017009", {
-      method: "POST",
-      body: formData,
-      headers: {
-        "Accept": "application/json",
-      },
-    })
-    .then((response) => {
-      evt.target.reset();
-      console.log(response)
-    })
-    .catch(error => console.log(error))
-}
 
 const ContactPage = () => {
   const [serverState, setServerState] = useState({

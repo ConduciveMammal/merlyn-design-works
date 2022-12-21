@@ -2,7 +2,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import mixpanel from 'mixpanel-browser';
-import { MixpanelProvider, MixpanelConsumer } from 'react-mixpanel';
+import { MixpanelProvider } from 'react-mixpanel';
 
 import Header from "./header"
 import Launcher from "../elements/launcher/Launcher"
