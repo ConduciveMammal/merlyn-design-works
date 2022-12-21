@@ -15,12 +15,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     'gatsby-plugin-svgr',
-    {
-      resolve: `gatsby-plugin-csp`,
-      options: {
-        disableOnDev: true
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-csp`,
+    //   options: {
+    //     disableOnDev: true
+    //   }
+    // },
     {
       resolve: `gatsby-plugin-sass`,
       options: {
