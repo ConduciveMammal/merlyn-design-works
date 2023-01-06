@@ -27,7 +27,7 @@ const introContent = {
   imageAlt: 'Liam Merlyn',
   title: 'Liam Merlyn',
   subheading: 'Lead Shopify Developer, Birmingham, UK.',
-  content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet repellat reprehenderit magnam culpa enim corporis?'
+  content: "Hi there! I'm Liam Merlyn and I'm the Lead Web Developer at Kubix. When I'm not busy building beautiful websites, you can find me drinking a little too much coffee. Just don't let my sense of humour fool you - I take my job very seriously. I may not always be serious, but my work always is."
 }
 
   return (
