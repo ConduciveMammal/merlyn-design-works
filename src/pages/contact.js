@@ -46,7 +46,8 @@ const ContactPage = () => {
         <SectionHeader
           title="Say &rdquo;Hey!&ldquo; to me"
           />
-        <form action="https://getform.io/f/e17fe6a1-2a18-4b27-ac16-bfa123017009" method="POST" onSubmit={handleOnSubmit} className={`contact-form${serverState.submitting ? 'contact-form--submitting' : ''}`}>
+
+        {/* <form action="https://getform.io/f/e17fe6a1-2a18-4b27-ac16-bfa123017009" method="POST" onSubmit={handleOnSubmit} className={`contact-form${serverState.submitting ? 'contact-form--submitting' : ''}`}>
             <input type="hidden" name="_gotcha" style={{display: 'none'}}/>
 
             <div className="contact-form__wrapper">
@@ -73,7 +74,7 @@ const ContactPage = () => {
             </div>
 
             <button type="submit" className="button button--icon">Send Message</button>
-        </form>
+        </form> */}
       </Layout>
   );
 }
