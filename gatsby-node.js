@@ -6,4 +6,16 @@ exports.createPages = async ({ actions }) => {
     context: {},
     defer: true,
   })
+
+  actions.createSlice({
+    id: `header`,
+    component: require.resolve(`./src/components/structure/header.jsx`),
+  })
+
+  actions.createSlice({
+    id: `footer`,
+    component: require.resolve(`./src/components/structure/footer.jsx`),
+  })
 }
+
+

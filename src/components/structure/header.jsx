@@ -1,28 +1,12 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { graphql, Link } from "gatsby"
 import logo from '../../images/mdw-logo.svg';
 import './header.scss';
 
-
-
-const Header = ({ siteTitle }) => {
-  const navigationLinks = useStaticQuery(graphql`
-    query getNavigationItems {
-      allContentfulNavigationItem {
-        edges {
-          node {
-            menuTitle
-            menuUrl
-            id
-          }
-        }
-      }
-    }
-  `)
-  const navigation = navigationLinks.allContentfulNavigationItem.edges;
-  console.log(navigation);
-    return (
+const Header = ({ data, siteTitle }) => {
+  const navigation = data.allContentfulNavigationItem.edges;
+  return (
     <header
       className="header">
       <div className="header__logo">
@@ -55,6 +39,20 @@ const Header = ({ siteTitle }) => {
     </header>
   )
 }
+
+export const navigationLinks = graphql`
+query getNavigationItems {
+  allContentfulNavigationItem {
+    edges {
+      node {
+        menuTitle
+        menuUrl
+        id
+      }
+    }
+  }
+}
+`;
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

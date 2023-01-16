@@ -1,10 +1,8 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Slice } from "gatsby"
 import mixpanel from 'mixpanel-browser';
 import { MixpanelProvider } from 'react-mixpanel';
-
-import Header from "./header"
 import Launcher from "../elements/launcher/Launcher"
 import "./layout.scss"
 
@@ -26,7 +24,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <MixpanelProvider mixpanel={mixpanel}>
-        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+        <Slice alias="header" siteTitle={data.site.siteMetadata?.title || `Title`} />
         <div
           style={{
             margin: `0 auto`,
@@ -35,20 +33,13 @@ const Layout = ({ children }) => {
           }}
         >
           <main>{children}</main>
-          <footer
-            style={{
-              marginTop: `var(--space-5)`,
-              fontSize: `var(--font-sm)`,
-            }}
-          >
-            &copy; {new Date().getFullYear()} &middot; Liam Merlyn
-          </footer>
           {
             process.env.ENV === 'development' ? (
               <Launcher />
-            ) : null
-          }
+              ) : null
+            }
         </div>
+        <Slice alias="footer"  siteTitle={data.site.siteMetadata?.title || `Title`} />
       </MixpanelProvider>
     </>
   )

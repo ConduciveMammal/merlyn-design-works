@@ -1,0 +1,27 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1.5fr 2.5fr;
+  margin-top: var(--space-5);
+  font-size: var(--font-sm);
+}
+
+.footer__column {
+  padding: 65px 105px;
+}
+
+.footer__column--right {
+  background-color: #242A35;
+}
+
+.footer__list-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 60px;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
